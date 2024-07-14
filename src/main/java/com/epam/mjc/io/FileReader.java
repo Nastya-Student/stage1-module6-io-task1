@@ -14,9 +14,7 @@ public class FileReader {
             while((ch = reader.read()) != -1){
                 data.append((char)ch);
             }
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-        }catch (IOException e){
+        } catch (IOException e){
             e.printStackTrace();
         }
         Map<String, String> parsedData = parse(data.toString());
